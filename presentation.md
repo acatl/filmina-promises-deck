@@ -58,9 +58,9 @@ url: its-complicated.html
 
 ```
 readFile
-	parseSlides
-		transformSlides
-			buildDeck
+    parseSlides
+        transformSlides
+            buildDeck
 ```
 
 <img class="meme" src="http://www.pngall.com/wp-content/uploads/2016/03/Challenge-Accepted-Meme-PNG.png" alt="meme">
@@ -73,24 +73,24 @@ url: callback-hell.html
 
 ```js
 readFile('paresentation.md', function(err, raw){
-	if(err) {
-		return err;
-	}
-	return parseSlides(raw, function(err, slides){
-		if(err) {
-			return err;
-		}
-		return transformSlides(slides,function(err, slides){
-			if(err) {
-				return err;
-			}
-			return buildDeck(slides,function(err, output){
-				if(err) {
-					return err;
-				}
-			});
-		});
-	});
+    if(err) {
+        return err;
+    }
+    return parseSlides(raw, function(err, slides){
+        if(err) {
+            return err;
+        }
+        return transformSlides(slides,function(err, slides){
+            if(err) {
+                return err;
+            }
+            return buildDeck(slides,function(err, output){
+                if(err) {
+                    return err;
+                }
+            });
+        });
+    });
 });
 ```
 
@@ -106,10 +106,10 @@ url: whats-wrong-with-callbacks.html
 ## Whats wrong with that code?
 
 - error handling
-- callback nesting...
+- callback nesting -> callback hell
 - scoping
 - hard to debug
-- its just plain ... ugly
+- it's just plain ... ugly
 
 ---
 <!-- meta
@@ -142,12 +142,12 @@ url: bettter-with-promises.html
 
 ```js
 readFile('paresentation.md')
-	.then(parseSlides)
-	.then(transformSlides)
-	.then(buildDeck)
-	.catch( err => {
-		console.error(err);
-	});
+    .then(parseSlides)
+    .then(transformSlides)
+    .then(buildDeck)
+    .catch( err => {
+        console.error(err);
+    });
 });
 ```
 
@@ -182,8 +182,8 @@ url: promises-in-the-wild.html
 
 ```js
 var jqxhr = $.ajax('http://some.site.com/service')
-	.done(function(result) {
-		console.log('success', result);
+    .done(function(result) {
+        console.log('success', result);
   });
 ```
 
