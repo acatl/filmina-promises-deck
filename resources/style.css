@@ -1,0 +1,76 @@
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  color: #555;
+}
+
+body {
+	padding: 2vh 2vw;
+	background: white;
+}
+
+.barba-container {
+  position: relative;
+}
+
+h1 {
+	font-size: 45px;
+	line-height: 45px;
+}
+h2 {
+	font-size: 35px;
+	line-height: 35px;
+}
+h3 {
+	font-size: 25px;
+	line-height: 25px;
+}
+
+h4 {
+	font-size: 20px;
+	line-height: 20px;
+}
+
+h1, h2, h3 {
+	margin: 20px 0;
+}
+
+p, li, quote {
+	font-size: 17px !important;
+	line-height: 30px !important;
+}
+
+li {
+	padding-bottom: 18px;
+}
+
+pre code {
+	font-size: 17px;
+}
+
+a.nav {
+	position: fixed;
+  padding: 20px 20px 26px 20px;
+  background: whitesmoke;
+  color: gray;
+  font-size: 28px;
+}
+
+a.nav.prev {
+	bottom: 0;
+	left: 0;
+}
+
+a.nav.next {
+	bottom: 0;
+	right: 0;
+}
+
+img.meme {
+	position: fixed;
+  opacity: 0.8;
+  bottom: 62px;
+  height: 300px;
+  right: 69px;
+}
